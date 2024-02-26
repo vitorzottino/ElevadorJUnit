@@ -14,6 +14,7 @@ public class ElevadorTests {
 	Pessoa p2 = new Pessoa("Roberto", 80);
 	Pessoa p3 = new Pessoa("Matheus", 80);
 
+	
 	Elevador elevador = new Elevador(1, 200);
 
 	@Test
@@ -34,6 +35,12 @@ public class ElevadorTests {
 		elevador.sairDoElevador(p1.getPeso());
 		assertEquals(0, elevador.getCargaAtual(), 0.1);
 
+	}
+	
+	@Test
+	public void testeEntrar() {
+		elevador.entrarNoElevador(p1.getPeso());
+		assertEquals(80, elevador.getCargaAtual(), 0);
 	}
 
 }
